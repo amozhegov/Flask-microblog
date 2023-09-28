@@ -28,7 +28,7 @@ class UserModelCase(unittest.TestCase):
 
 
     def test_follow(self):
-        u1 = User(username='joe', email='joe@example.com')
+        u1 = User(username='fred', email='fred@example.com')
         u2 = User(username='jason', email='jason@example.com')
         db.session.add(u1)
         db.session.add(u2)
@@ -42,35 +42,37 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(u1.followed.count(), 1)
         self.assertEqual(u1.followed.first().username, 'jason')
         self.assertEqual(u2.followers.count(), 1)
-        self.assertEqual(u2.followers.first().username, 'joe')
+        self.assertEqual(u2.followers.first().username, 'fred')
 
         u1.unfollow(u2)
         db.session.commit()
         self.assertFalse(u1.is_following(u2))
         self.assertEqual(u1.followed.count(), 0)
-        self.assertEqual(u1.followers.count(), 0)
+        self.assertEqual(u2.followers.count(), 0)
 
     def test_follow_posts(self):
-        u1 = User(username='joe', email='joe@example.com')
+        # Four new users
+        u1 = User(username='erik', email='erik@example.com')
         u2 = User(username='jason', email='jason@example.com')
         u3 = User(username='frank', email='frank@example.com')
         u4 = User(username='lisa', email='lisa@example.com')
 
         db.session.add_all([u1, u2, u3, u4])
 
+        # Add 4 posts
         now = datetime.utcnow()
         p1 = Post(body = 'message from Joe', 
                   author = u1,
-                  timestamp= now + timedelta(seconds=1))
+                  timestamp = now + timedelta(seconds=1))
         p2 = Post(body = 'message from Jason', 
                   author = u2,
-                  timestamp= now + timedelta(seconds=4))
+                  timestamp = now + timedelta(seconds=4))
         p3 = Post(body = 'message from Frank', 
                   author = u3,
-                  timestamp= now + timedelta(seconds=3))
+                  timestamp = now + timedelta(seconds=3))
         p4 = Post(body = 'message from Lisa', 
                   author = u4,
-                  timestamp= now + timedelta(seconds=2))
+                  timestamp = now + timedelta(seconds=2))
         db.session.add_all([p1, p2, p3, p4])
         db.session.commit()
 
