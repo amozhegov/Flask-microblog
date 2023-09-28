@@ -78,7 +78,8 @@ def user(username):
         {'author': user, 'body': 'Test post #1'},
         {'author': user, 'body': 'Test post #2'}
     ]
-    return render_template('user.html', user=user, posts=posts)
+    form = EmptyForm()
+    return render_template('user.html', user=user, posts=posts, form=form)
 
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
@@ -98,7 +99,7 @@ def edit_profile():
                            title='Edit Profile',
                            form=form)
 
-@app.route('/follow/<username>', method=['POST'])
+@app.route('/follow/<username>', methods=['POST'])
 @login_required
 def follow(username):
     form = EmptyForm()
@@ -114,7 +115,7 @@ def follow(username):
     else:
         return redirect(url_for('index'))
     
-@app.route('/unfollow/<username>', method=['POST'])
+@app.route('/unfollow/<username>', methods=['POST'])
 @login_required
 def unfollow(username):
     form = EmptyForm()
@@ -132,3 +133,4 @@ def unfollow(username):
         return redirect(url_for('user', username=username))
     else:
         return redirect(url_for('index'))
+    
