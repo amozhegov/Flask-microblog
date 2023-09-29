@@ -18,7 +18,6 @@ def before_request():
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    #form = PostForm
     form = PostForm()
     if form.validate_on_submit():
         post = Post(body=form.post.data, author=current_user)
