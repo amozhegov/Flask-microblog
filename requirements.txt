@@ -5,3 +5,4 @@ flask-migrate
 flask-login
 email-validator
 flask-mail
+flask-moment
