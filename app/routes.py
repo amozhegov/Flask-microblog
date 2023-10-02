@@ -5,7 +5,8 @@ from werkzeug.urls import url_parse
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, EmptyForm, PostForm
 from app.models import User, Post
-
+from flask import jsonify
+from app.translate import translate
 
 @app.before_request
 def before_request():
@@ -179,3 +180,11 @@ def explore():
                            posts=posts.items,
                            next_url=next_url,
                            prev_url=prev_url)
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    return jsonify({
+        'text': translate(request.form['text'],
+                          request.form['source_lang'],
+                          request.form['dest_lang'])})

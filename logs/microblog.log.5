@@ -1,4 +1,23 @@
-2023-09-29 20:48:57,570 ERROR: Exception on /login [POST] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+2023-09-26 23:03:33,023 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-27 20:15:15,779 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-27 20:16:01,484 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 00:31:27,549 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 15:14:34,648 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 15:49:45,107 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:01:17,826 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:05:51,576 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:06:51,098 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:12:10,241 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:17:52,461 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:41:43,639 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:44:16,378 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:45:44,779 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:47:19,400 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 16:51:22,939 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 20:21:00,679 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-28 20:22:05,561 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-29 17:47:20,789 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-29 17:47:28,998 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,87 +27,71 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 54, in login
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2023-09-29 17:47:31,560 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2023-09-29 17:47:33,137 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2023-09-29 17:47:36,009 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
+    if form.validate_on_submit():
+TypeError: validate_on_submit() missing 1 required positional argument: 'self'
+2023-09-29 17:48:04,263 ERROR: Exception on /login [POST] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 42, in login
     if user is None or not user.check_password(form.password.data):
   File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/models.py", line 38, in check_password
     return check_password_hash(self.password_hash, password)
   File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/werkzeug/security.py", line 135, in check_password_hash
     method, salt, hashval = pwhash.split("$", 2)
 AttributeError: 'NoneType' object has no attribute 'split'
-2023-09-29 20:49:07,314 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
-    if form.validate_on_submit():
-TypeError: validate_on_submit() missing 1 required positional argument: 'self'
-2023-09-29 20:49:24,382 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
-2023-09-29 20:49:26,407 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
-    if form.validate_on_submit():
-TypeError: validate_on_submit() missing 1 required positional argument: 'self'
-2023-09-29 20:49:33,623 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
-    if form.validate_on_submit():
-TypeError: validate_on_submit() missing 1 required positional argument: 'self'
-2023-09-29 20:49:35,838 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
-    if form.validate_on_submit():
-TypeError: validate_on_submit() missing 1 required positional argument: 'self'
-2023-09-29 20:49:47,605 ERROR: Exception on /index [GET] [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/artem/Documents/Programming/Python/Flask-micro-blog/app/routes.py", line 22, in index
-    if form.validate_on_submit():
-TypeError: validate_on_submit() missing 1 required positional argument: 'self'
-2023-09-29 21:00:51,309 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
+2023-09-29 20:48:15,237 INFO: Microblog startup [in /Users/artem/Documents/Programming/Python/Flask-micro-blog/app/__init__.py:48]
