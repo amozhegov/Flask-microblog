@@ -11,7 +11,6 @@ from flask_moment import Moment
 from flask_babel import Babel
 from flask import request
 
-
 app = Flask(__name__)
 # Enable debug mode
 #app.debug = True

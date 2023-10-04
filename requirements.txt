@@ -7,3 +7,6 @@ email-validator
 flask-mail
 flask-moment
 requests
+PyJWT
+langdetect
+"flask-babel<3"
