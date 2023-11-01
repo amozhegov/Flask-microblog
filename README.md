@@ -1,6 +1,5 @@
 # Flask-micro-blog
 
-asynchronous
-Ajax
+Flask microblog app with SQLite and SQLAlchemy, user registration
 
 
